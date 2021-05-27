@@ -18,7 +18,7 @@ email_field.send_keys("mr.kutovyi@gmail.com")
 pass_field = driver.find_element_by_css_selector("input[placeholder='Ваш пароль']")
 driver.execute_script("arguments[0].click();", pass_field)
 pass_field.send_keys("ab63cbee6a")
-time.sleep(25)
+time.sleep(5)
 
 login = driver.find_element_by_css_selector("button[id='button-login']")
 login.click()
