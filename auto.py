@@ -8,11 +8,11 @@ driver = webdriver.Chrome('C:\Python\chromedriver')
 
 driver.get('https://www.gorgany.com/')
 driver.maximize_window()
-time.sleep(2)
+time.sleep(1)
 
 login_button = driver.find_element_by_css_selector("button[class='user hidden-xs hidden-sm hidden-md login']")
 login_button.click()
-time.sleep(3)
+driver.implicitly_wait(10)
 
 email_field = driver.find_element_by_css_selector("input[placeholder='Ваша e-mail адреса']")
 driver.execute_script("arguments[0].click();", email_field)
