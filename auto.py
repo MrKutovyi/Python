@@ -29,8 +29,27 @@ login.click()
 driver.implicitly_wait(10)
 time.sleep(3)
 
+menu_equipment = driver.find_element_by_css_selector("a[href='https://www.gorgany.com/sporiadzhennia']")
+menu_equipment.click()
+driver.implicitly_wait(20)
 
-# unlogin_button = driver.find_element_by_css_selector ("button[class='user hidden-xs hidden-sm hidden-md login']")
-# unlogin_button.click()
-# driver.implicitly_wait(10)
+tents = driver.find_element_by_css_selector("a[href='https://www.gorgany.com/sporiadzhennia/namety-i-tenty']")
+tents.click()
+time.sleep(15)
+
+
+
+
+
+
+
+
+
+
+
+
+# logout_button = driver.find_element_by_css_selector ("div.user-control__room.hidden-xs.hidden-sm.hidden-md.open > button")
+# # driver.execute_script("arguments[0].click();", logout_button)
+# logout_button.click()
+
 driver.quit()
