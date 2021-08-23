@@ -1,8 +1,5 @@
 from selenium import webdriver
 import time
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 
 driver = webdriver.Chrome()
 # 'C:\Python\chromedriver'
@@ -32,24 +29,10 @@ time.sleep(3)
 menu_equipment = driver.find_element_by_css_selector("a[href='https://www.gorgany.com/sporiadzhennia']")
 menu_equipment.click()
 driver.implicitly_wait(20)
+time.sleep(3)
 
-tents = driver.find_element_by_css_selector("a[href='https://www.gorgany.com/sporiadzhennia/namety-i-tenty']")
+tents = driver.find_element_by_xpath("//span[text()='Намети і тенти']")
 tents.click()
-time.sleep(15)
-
-
-
-
-
-
-
-
-
-
-
-
-# logout_button = driver.find_element_by_css_selector ("div.user-control__room.hidden-xs.hidden-sm.hidden-md.open > button")
-# # driver.execute_script("arguments[0].click();", logout_button)
-# logout_button.click()
+time.sleep(5)
 
 driver.quit()
