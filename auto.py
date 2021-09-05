@@ -23,16 +23,16 @@ driver.implicitly_wait(10)
 
 login = driver.find_element_by_css_selector("button[id='button-login']")
 login.click()
-driver.implicitly_wait(10)
+#driver.implicitly_wait(20)
 time.sleep(3)
 
 menu_equipment = driver.find_element_by_css_selector("a[href='https://www.gorgany.com/sporiadzhennia']")
 menu_equipment.click()
 driver.implicitly_wait(20)
-#time.sleep(3)
+
 
 tents = driver.find_element_by_xpath("//span[text()='Намети і тенти']")
 tents.click()
-#time.sleep(5)
+
 
 driver.quit()
